@@ -1,0 +1,53 @@
+version: "2"
+type: frontend
+tech_stack:
+  - Next.js 16.2.4
+  - React 19
+  - TypeScript
+  - Tailwind CSS v4
+  - Framer Motion
+  - Lucide React
+routes:
+  - path: /
+    file: src/app/page.tsx
+    auth_required: false
+    description: Landing page with Hero, Services, Portfolio, Shop, Contact sections
+features:
+  - name: Landing Page Navigation
+    description: Single page with scrollable sections
+    files:
+      - src/app/page.tsx
+      - src/components/sections/Hero.tsx
+      - src/components/sections/Services.tsx
+      - src/components/sections/Portfolio.tsx
+      - src/components/sections/Shop.tsx
+      - src/components/sections/Contact.tsx
+    entry_route: /
+    user_interactions:
+      - Scroll through page sections
+      - Click navigation links in navbar
+      - Interact with contact form
+    api_calls: []
+    auth_required: false
+  - name: Chat Widget
+    description: Floating chat widget for user communication
+    files:
+      - src/components/chat/ChatWidget.tsx
+    entry_route: /
+    user_interactions:
+      - Click chat button to open/close chat
+      - Type message in chat input
+      - Send message
+    api_calls: []
+    auth_required: false
+  - name: Navigation
+    description: Responsive navbar with navigation links
+    files:
+      - src/components/layout/Navbar.tsx
+    entry_route: /
+    user_interactions:
+      - Click navbar links to scroll to sections
+      - Toggle mobile menu
+    api_calls: []
+    auth_required: false
+known_limitations: []

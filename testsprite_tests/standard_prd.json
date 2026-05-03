@@ -1,0 +1,97 @@
+{
+  "projectName": "Novu Agency",
+  "projectType": "Landing Page",
+  "coreFunctionality": "Landing page para agencia de automatización e IA",
+  "targetUsers": ["Emprendedores", "Pymes", "Empresas que buscan IA"],
+  "requirements": [
+    {
+      "id": "REQ001",
+      "category": "Hero Section",
+      "description": "Sección principal con headline, estadísticas y CTAs",
+      "acceptanceCriteria": [
+        "Hero visible al cargar",
+        "Headline con gradient animado",
+        "Stats: 500+ automations, 98% satisfacción, 24/7",
+        "CTA buttons clickables"
+      ]
+    },
+    {
+      "id": "REQ002",
+      "category": "Services Section",
+      "description": "Grid de 4 servicios destacados",
+      "acceptanceCriteria": [
+        "4 servicios visibles",
+        "Icons, títulos, descripciones",
+        "Hover effects en cards"
+      ]
+    },
+    {
+      "id": "REQ003",
+      "category": "Portfolio Section",
+      "description": "Casos de éxito con métricas",
+      "acceptanceCriteria": [
+        "4 casos visibles",
+        "Métricas y tags",
+        "Modal de detalle"
+      ]
+    },
+    {
+      "id": "REQ004",
+      "category": "Shop Section",
+      "description": "Tienda de productos digitales",
+      "acceptanceCriteria": [
+        "4 productos visibles",
+        "Precios y buy buttons",
+        "Producto Popular badge"
+      ]
+    },
+    {
+      "id": "REQ005",
+      "category": "Contact Section",
+      "description": "Formulario y información de contacto",
+      "acceptanceCriteria": [
+        "Formulario con name, email, message",
+        "Info: email, teléfono, ubicación",
+        "Cal.com embed"
+      ]
+    },
+    {
+      "id": "REQ006",
+      "category": "Navigation",
+      "description": "Navbar responsiva",
+      "acceptanceCriteria": [
+        "Navbar visible",
+        "Links funcionales",
+        "Mobile menu"
+      ]
+    },
+    {
+      "id": "REQ007",
+      "category": "Footer",
+      "description": "Footer con info de la empresa",
+      "acceptanceCriteria": [
+        "Footer visible al hacer scroll",
+        "Links y copyright"
+      ]
+    },
+    {
+      "id": "REQ008",
+      "category": "Chat Widget",
+      "description": "Widget de chat flotante",
+      "acceptanceCriteria": [
+        "Botón visible",
+        "Abre al hacer click"
+      ]
+    },
+    {
+      "id": "REQ009",
+      "category": "Performance",
+      "description": "La página carga sin errores críticos",
+      "acceptanceCriteria": [
+        "Page load < 5s",
+        "Sin errores críticos en consola",
+        "Interactiva después de load"
+      ]
+    }
+  ]
+}

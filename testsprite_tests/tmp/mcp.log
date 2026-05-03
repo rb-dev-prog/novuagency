@@ -1,0 +1,37 @@
+{"timestamp":"2026-05-03T18:43:24.477Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T18:43:24.498Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:43:25.005Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:43:25.516Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:43:26.029Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:51:56.629Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T18:51:56.649Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:51:57.153Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:51:57.665Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:51:58.183Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:57:14.782Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T18:57:14.805Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:57:15.317Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:57:15.830Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:57:16.339Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T18:57:16.849Z","level":"info","message":"checkPortListening tcp failed, trying http fallback: 3000 localhost"}
+{"timestamp":"2026-05-03T19:02:23.611Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:02:23.630Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:24.138Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:24.646Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:25.156Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:25.669Z","level":"info","message":"checkPortListening tcp failed, trying http fallback: 3000 localhost"}
+{"timestamp":"2026-05-03T19:02:32.425Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:02:32.448Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:32.964Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:33.474Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:33.988Z","level":"error","message":"checkPortListening tcp error: 3000 localhost\nAggregateError"}
+{"timestamp":"2026-05-03T19:02:34.498Z","level":"info","message":"checkPortListening tcp failed, trying http fallback: 3000 localhost"}
+{"timestamp":"2026-05-03T19:09:11.166Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:09:35.892Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:09:35.916Z","level":"info","message":"Attempting to start server (attempt 1/3)"}
+{"timestamp":"2026-05-03T19:09:57.880Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:09:57.901Z","level":"info","message":"Attempting to start server (attempt 1/3)"}
+{"timestamp":"2026-05-03T19:09:57.906Z","level":"info","message":"HTTP server started successfully on port 58374"}
+{"timestamp":"2026-05-03T19:10:36.170Z","level":"debug","message":"Generate code and execute params","context":{"projectName":"novu-agency","projectPath":"C:\\Proyectos\\novuagency-v2\\novu-agency","testIds":[],"serverMode":"development"}}
+{"timestamp":"2026-05-03T19:10:36.190Z","level":"info","message":"Attempting to start server (attempt 1/3)"}
+{"timestamp":"2026-05-03T19:10:36.193Z","level":"info","message":"HTTP server started successfully on port 58394"}

@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "loginUser": "admin@admin.com",
+  "loginPassword": "admin123",
+  "executionArgs": {
+    "projectName": "novu-agency",
+    "projectPath": "C:\\Proyectos\\novuagency-v2\\novu-agency",
+    "testIds": [],
+    "additionalInstruction": "Run 15 high-priority tests for the landing page",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-7kNUd0c4qgriRpsrhuOUo55kAgXwwWkiW21U6sIfwUKfOtzm8M4K93P_sRNwNgXAoy1v6tuows4geeahD9UINbwOxsxzPFDb8CuMYQIAzPV6ND9BlZCJV5M8mtJs-wxESHk"
+    }
+  }
+}

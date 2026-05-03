@@ -1,0 +1,167 @@
+[
+  {
+    "id": "TC001",
+    "requirement": "Hero Section - Visual",
+    "priority": "high",
+    "title": "Hero section loads with headline and stats",
+    "steps": [
+      "Navigate to homepage",
+      "Wait for page load",
+      "Verify Hero section is visible",
+      "Verify headline text is displayed",
+      "Verify stats are visible"
+    ]
+  },
+  {
+    "id": "TC002",
+    "requirement": "Hero Section - Interaction",
+    "priority": "high",
+    "title": "CTA buttons are clickable",
+    "steps": [
+      "Navigate to homepage",
+      "Find CTA button",
+      "Click the button"
+    ]
+  },
+  {
+    "id": "TC003",
+    "requirement": "Services Section - Display",
+    "priority": "high",
+    "title": "Services section shows service cards",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Services section",
+      "Verify service cards are visible"
+    ]
+  },
+  {
+    "id": "TC004",
+    "requirement": "Services Section - Interaction",
+    "priority": "medium",
+    "title": "Service cards have hover effects",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Services section",
+      "Hover over a service card"
+    ]
+  },
+  {
+    "id": "TC005",
+    "requirement": "Portfolio Section - Display",
+    "priority": "high",
+    "title": "Portfolio shows case studies",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Portfolio section",
+      "Verify portfolio cards are visible"
+    ]
+  },
+  {
+    "id": "TC006",
+    "requirement": "Shop Section - Display",
+    "priority": "high",
+    "title": "Shop shows products",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Shop section",
+      "Verify product cards are visible"
+    ]
+  },
+  {
+    "id": "TC007",
+    "requirement": "Shop Section - Interaction",
+    "priority": "medium",
+    "title": "Buy buttons are present",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Shop section",
+      "Find buy button"
+    ]
+  },
+  {
+    "id": "TC008",
+    "requirement": "Contact Section - Display",
+    "priority": "high",
+    "title": "Contact section shows form and info",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Contact section",
+      "Verify contact form is visible",
+      "Verify contact info is displayed"
+    ]
+  },
+  {
+    "id": "TC009",
+    "requirement": "Contact Section - Form",
+    "priority": "high",
+    "title": "Contact form has required fields",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to Contact section",
+      "Verify name, email, message fields"
+    ]
+  },
+  {
+    "id": "TC010",
+    "requirement": "Navigation - Navbar",
+    "priority": "high",
+    "title": "Navbar is visible on page load",
+    "steps": [
+      "Navigate to homepage",
+      "Verify Navbar is visible"
+    ]
+  },
+  {
+    "id": "TC011",
+    "requirement": "Navigation - Responsive",
+    "priority": "medium",
+    "title": "Mobile menu toggles",
+    "steps": [
+      "Navigate to homepage on mobile viewport",
+      "Find hamburger menu",
+      "Click to toggle menu"
+    ]
+  },
+  {
+    "id": "TC012",
+    "requirement": "Footer - Display",
+    "priority": "medium",
+    "title": "Footer is visible at bottom",
+    "steps": [
+      "Navigate to homepage",
+      "Scroll to bottom",
+      "Verify Footer is visible"
+    ]
+  },
+  {
+    "id": "TC013",
+    "requirement": "Chat Widget - Display",
+    "priority": "low",
+    "title": "Chat widget button is visible",
+    "steps": [
+      "Navigate to homepage",
+      "Find chat widget button"
+    ]
+  },
+  {
+    "id": "TC014",
+    "requirement": "Chat Widget - Interaction",
+    "priority": "low",
+    "title": "Chat widget opens on click",
+    "steps": [
+      "Navigate to homepage",
+      "Click chat widget button"
+    ]
+  },
+  {
+    "id": "TC015",
+    "requirement": "Page Performance - Load",
+    "priority": "high",
+    "title": "Page loads without critical errors",
+    "steps": [
+      "Navigate to homepage",
+      "Wait for page to fully load",
+      "Verify no console errors"
+    ]
+  }
+]
