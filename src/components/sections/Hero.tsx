@@ -39,7 +39,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass mb-10 gradient-border">
-            <Sparkles className="w-4 h-4 text-accent animate-pulse" />
+            <Sparkles className="w-4 h-4 text-accent animate-pulse" strokeWidth={1.5} />
             <span className="text-sm font-medium text-textSecondary tracking-wide">AUTOMATIZACIÓN INTELIGENTE</span>
           </div>
         </motion.div>
@@ -76,7 +76,7 @@ export function Hero() {
           <Button size="lg" className="group relative overflow-hidden">
             <span className="relative z-10 flex items-center">
               Agendar Consultoría
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-light opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
@@ -123,7 +123,7 @@ export function Hero() {
               className="flex items-center gap-3 px-4 py-2 rounded-full glass"
             >
               <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                <benefit.icon className="w-4 h-4 text-accent" />
+                <benefit.icon className="w-4 h-4 text-accent" strokeWidth={1.5} />
               </div>
               <span className="text-sm text-textSecondary">{benefit.text}</span>
             </motion.div>
