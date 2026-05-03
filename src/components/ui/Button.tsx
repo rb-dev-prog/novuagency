@@ -12,25 +12,26 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', isLoading, children, disabled, ...props }, ref) => {
     const variants = {
-      primary: 'bg-primary text-white hover:bg-primaryHover shadow-lg shadow-primary/25',
-      secondary: 'bg-surface text-textPrimary hover:bg-surfaceHover border border-border',
-      outline: 'border border-primary text-primary hover:bg-primary/10',
+      primary: 'bg-gradient-to-r from-primary to-primary-light text-white hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02] active:scale-[0.98]',
+      secondary: 'bg-surface-elevated text-textPrimary hover:bg-surface-hover border border-border-light hover:border-primary/50',
+      outline: 'border border-border text-textPrimary hover:bg-primary/10 hover:border-primary hover:text-white',
       ghost: 'text-textSecondary hover:text-textPrimary hover:bg-surface',
     };
 
     const sizes = {
-      sm: 'px-3 py-1.5 text-sm',
-      md: 'px-5 py-2.5 text-base',
-      lg: 'px-7 py-3.5 text-lg',
+      sm: 'px-4 py-2 text-sm',
+      md: 'px-6 py-3 text-base',
+      lg: 'px-8 py-4 text-lg',
     };
 
     return (
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 cursor-pointer',
-          'disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none',
+          'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 cursor-pointer',
+          'disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:hover:scale-100',
           'focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background',
+          'relative overflow-hidden',
           variants[variant],
           sizes[size],
           className

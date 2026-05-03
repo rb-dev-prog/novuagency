@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -22,22 +22,25 @@ export function Hero() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-mesh">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-30" />
+      <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-glow" />
+      <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px] animate-glow" style={{ animationDelay: '2s' }} />
+
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-border mb-8">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-textSecondary text-sm">Automatización Inteligente</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass mb-10 gradient-border">
+            <Sparkles className="w-4 h-4 text-accent animate-pulse" />
+            <span className="text-sm font-medium text-textSecondary tracking-wide">AUTOMATIZACIÓN INTELIGENTE</span>
           </div>
         </motion.div>
 
@@ -45,11 +48,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-textPrimary leading-tight mb-6"
+          className="text-5xl md:text-6xl lg:text-8xl font-bold text-textPrimary leading-[1.1] mb-8 tracking-tight"
         >
           Escala tu negocio con{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient">
-            Inteligencia Artificial
+          <span className="relative inline-block">
+            <span className="relative z-10 text-gradient">IA</span>
+            <span className="absolute inset-0 blur-xl bg-primary/30 animate-pulse-glow" />
           </span>
         </motion.h1>
 
@@ -57,9 +61,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-textSecondary max-w-2xl mx-auto mb-10"
+          className="text-lg md:text-xl text-textSecondary max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Transformamos procesos manuales en sistemas automatizados usando IA y agentes inteligentes.
+          Transformamos procesos manuales en sistemas automatizados usando agentes inteligentes. 
           Tu equipo focused en lo importante, nosotros handled lo repetitivo.
         </motion.p>
 
@@ -69,11 +73,14 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
-          <Button size="lg" className="group">
-            Agendar Consultoría
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <Button size="lg" className="group relative overflow-hidden">
+            <span className="relative z-10 flex items-center">
+              Agendar Consultoría
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-light opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
-          <Button variant="outline" size="lg" onClick={() => document.getElementById('portafolio')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button variant="outline" size="lg" className="glass gradient-border" onClick={() => document.getElementById('portafolio')?.scrollIntoView({ behavior: 'smooth' })}>
             Ver Casos de Éxito
           </Button>
         </motion.div>
@@ -82,27 +89,44 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-3 gap-6 mb-16"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-textPrimary mb-1">{stat.value}</div>
-              <div className="text-textMuted text-sm">{stat.label}</div>
-            </div>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+              className="group relative p-6 rounded-2xl glass hover:bg-surface-hover transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-2xl gradient-border opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative">
+                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{stat.value}</div>
+                <div className="text-textMuted text-sm font-medium">{stat.label}</div>
+              </div>
+            </motion.div>
           ))}
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-wrap items-center justify-center gap-6"
         >
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-2 text-textSecondary">
-              <benefit.icon className="w-5 h-5 text-accent" />
-              <span className="text-sm">{benefit.text}</span>
-            </div>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+              className="flex items-center gap-3 px-4 py-2 rounded-full glass"
+            >
+              <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                <benefit.icon className="w-4 h-4 text-accent" />
+              </div>
+              <span className="text-sm text-textSecondary">{benefit.text}</span>
+            </motion.div>
           ))}
         </motion.div>
       </div>

@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { siteConfig } from "@/lib/config";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ 
+  subsets: ["latin"], 
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({ 
+  subsets: ["latin"], 
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -49,8 +59,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
-      <body className={`${inter.className} min-h-screen bg-background text-textPrimary antialiased`}>
+    <html lang="es" className={`dark ${sora.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen bg-background text-textPrimary antialiased font-[family-name:var(--font-dm-sans)]">
         <Navbar />
         <main>{children}</main>
         <Footer />
