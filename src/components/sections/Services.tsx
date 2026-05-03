@@ -70,7 +70,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-stretch">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -78,22 +78,23 @@ export function Services() {
               initial="hidden"
               animate={isInView ? 'visible' : 'hidden'}
               variants={cardVariants}
+              className="flex"
             >
-              <Card className="h-full group" interactive>
-                <div className="flex items-start justify-between mb-4">
+              <Card className="w-full group h-full flex flex-col" interactive>
+                <div className="flex items-start justify-between mb-4 shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-6 h-6 text-primary" />
+                    <service.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-textMuted opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowUpRight className="w-5 h-5 text-textMuted opacity-0 group-hover:opacity-100 transition-opacity" strokeWidth={1.5} />
                 </div>
 
                 <h3 className="text-xl font-semibold text-textPrimary mb-2">{service.title}</h3>
                 <p className="text-textSecondary mb-4">{service.description}</p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-2 mt-auto">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-textMuted">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                       {feature}
                     </li>
                   ))}

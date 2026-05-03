@@ -65,109 +65,118 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex"
           >
-            <Card className="mb-8">
-              <h3 className="text-xl font-semibold text-textPrimary mb-6 flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
+            <Card className="w-full h-full flex flex-col p-6">
+              <h3 className="text-xl font-semibold text-textPrimary mb-4 flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-primary" strokeWidth={1.5} />
                 Agenda tu Consultoría
               </h3>
-              <p className="text-textSecondary mb-6">
-                Selecciona un horario que te funcione y conversamos sobre tu negocio y cómo podemos ayudarte a escalar.
+              <p className="text-textSecondary mb-4">
+                Selecciona un horario que te funcione y conversamos sobre tu negocio.
               </p>
               <Button className="w-full" onClick={handleCalEmbed}>
-                <Calendar className="w-5 h-5 mr-2" />
-                Ver Horarios Disponibles
+                <Calendar className="w-5 h-5 mr-2" strokeWidth={1.5} />
+                Ver Horarios
               </Button>
-              <div id="cal-embed-container" className="mt-4 min-h-[400px]" />
-            </Card>
-
-            <Card>
-              <h3 className="text-xl font-semibold text-textPrimary mb-6">Información de Contacto</h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.href}
-                    className="flex items-center gap-4 p-3 rounded-lg hover:bg-background transition-colors"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <info.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-textMuted text-sm">{info.label}</div>
-                      <div className="text-textPrimary font-medium">{info.value}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
+              <div id="cal-embed-container" className="mt-4 min-h-[300px]" />
             </Card>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex"
           >
-            <Card>
-              <h3 className="text-xl font-semibold text-textPrimary mb-6 flex items-center gap-2">
-                <Send className="w-5 h-5 text-primary" />
+            <Card className="w-full h-full flex flex-col p-6">
+              <h3 className="text-xl font-semibold text-textPrimary mb-4 flex items-center gap-2">
+                <Send className="w-5 h-5 text-primary" strokeWidth={1.5} />
                 Envíanos un Mensaje
               </h3>
               
               {submitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-accent" />
+                <div className="text-center py-6">
+                  <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3">
+                    <Send className="w-6 h-6 text-accent" />
                   </div>
-                  <h4 className="text-xl font-semibold text-textPrimary mb-2">¡Mensaje Enviado!</h4>
-                  <p className="text-textSecondary">Te responderemos en menos de 24 horas.</p>
+                  <h4 className="text-lg font-semibold text-textPrimary mb-1">¡Enviado!</h4>
+                  <p className="text-textSecondary text-sm">Te respondemos en 24h.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3">
                   <div>
-                    <label className="block text-textSecondary text-sm mb-2">Nombre</label>
+                    <label className="block text-textSecondary text-sm mb-1">Nombre</label>
                     <input
                       type="text"
                       required
                       value={formState.name}
                       onChange={(e) => setFormState(prev => ({ ...prev, name: e.target.value }))}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors"
+                      className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors text-sm"
                       placeholder="Tu nombre"
                     />
                   </div>
                   <div>
-                    <label className="block text-textSecondary text-sm mb-2">Email</label>
+                    <label className="block text-textSecondary text-sm mb-1">Email</label>
                     <input
                       type="email"
                       required
                       value={formState.email}
                       onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors"
+                      className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors text-sm"
                       placeholder="tu@email.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-textSecondary text-sm mb-2">Mensaje</label>
+                    <label className="block text-textSecondary text-sm mb-1">Mensaje</label>
                     <textarea
                       required
-                      rows={4}
+                      rows={3}
                       value={formState.message}
                       onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors resize-none"
+                      className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:border-primary transition-colors resize-none text-sm"
                       placeholder="Cuéntanos sobre tu proyecto..."
                     />
                   </div>
-                  <Button type="submit" className="w-full" size="lg" isLoading={isSubmitting}>
-                    <Send className="w-5 h-5 mr-2" />
-                    Enviar Mensaje
+                  <Button type="submit" className="w-full mt-2" isLoading={isSubmitting}>
+                    <Send className="w-4 h-4 mr-2" strokeWidth={1.5} />
+                    Enviar
                   </Button>
                 </form>
               )}
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex"
+          >
+            <Card className="w-full h-full flex flex-col p-6">
+              <h3 className="text-xl font-semibold text-textPrimary mb-4">Información de Contacto</h3>
+              <div className="space-y-2">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-background transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <info.icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <div className="text-textMuted text-xs">{info.label}</div>
+                      <div className="text-textPrimary text-sm font-medium">{info.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </Card>
           </motion.div>
         </div>

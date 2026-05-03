@@ -12,9 +12,9 @@ const portfolioItems = [
     title: 'Clínica Dental - Sistema de Agendamiento',
     description: 'Automatización completa de citas con triaje automático y recordatorios por WhatsApp.',
     metrics: [
-      { icon: TrendingUp, value: '+60%', label: 'citas agendadas' },
-      { icon: Users, value: '-80%', label: 'no-shows' },
-      { icon: DollarSign, value: '$12K', label: 'ingresos extra/mes' },
+      { icon: TrendingUp, value: '+60%', label: 'citas agendadas', strokeWidth: 1.5 },
+      { icon: Users, value: '-80%', label: 'no-shows', strokeWidth: 1.5 },
+      { icon: DollarSign, value: '$12K', label: 'ingresos extra/mes', strokeWidth: 1.5 },
     ],
     tags: ['n8n', 'WhatsApp API', 'Cal.com'],
   },

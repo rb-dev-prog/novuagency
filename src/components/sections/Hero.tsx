@@ -22,7 +22,7 @@ export function Hero() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-mesh">
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-mesh pt-20">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       
       <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-glow" />
